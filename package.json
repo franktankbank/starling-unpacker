@@ -1,0 +1,68 @@
+{
+    "name": "starling-unpacker",
+    "version": "1.0.0",
+    "description": "A cli to unpack starling texture atlases",
+    "main": "bin/unpacker.mjs",
+    "keywords": [
+        "cli"
+    ],
+    "author": "Frank Froggins",
+    "license": "GPL-3.0-only",
+    "type": "module",
+    "dependencies": {
+        "canvas": "^3.2.3",
+        "chalk": "^6.0.0",
+        "xml2js": "^0.6.2",
+        "yargs": "^18.1.0"
+    },
+    "bin": {
+        "starling-unpacker": "bin/unpacker.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/franktankbank/starling-unpacker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/franktankbank/starling-unpacker/issues"
+    },
+    "homepage": "https://github.com/franktankbank/starling-unpacker#readme",
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@eslint/json": "^2.0.1",
+        "@eslint/markdown": "^8.0.3",
+        "@types/node": "^26.1.2",
+        "@types/xml2js": "^0.4.14",
+        "@types/yargs": "^17.0.35",
+        "eslint": "^10.8.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.8.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.2.0",
+        "prettier": "^3.9.6",
+        "tsdown": "^0.22.14",
+        "typescript": "^6.0.2",
+        "typescript-eslint": "^8.65.0"
+    },
+    "scripts": {
+        "build": "tsdown",
+        "starling-unpacker": "node bin/unpacker.mjs",
+        "lint": "eslint src tsconfig.json package.json README.md",
+        "format": "prettier . --write",
+        "prepublish": "npm run build",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{js,ts}": [
+            "eslint --fix",
+            "prettier --write"
+        ]
+    },
+    "engines": {
+        "node": "26"
+    },
+    "files": [
+        "bin/unpacker.mjs",
+        "README.md",
+        "LICENSE"
+    ]
+}

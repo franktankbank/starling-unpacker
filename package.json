@@ -1,6 +1,6 @@
 {
     "name": "starling-unpacker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A cli to unpack starling texture atlases",
     "main": "bin/unpacker.mjs",
     "keywords": [
